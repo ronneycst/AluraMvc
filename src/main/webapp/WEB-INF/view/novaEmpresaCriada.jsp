@@ -2,8 +2,9 @@
 
 <html>
 	<body>
-	
-		<c:if test="${not empty empresa}">
+	<c:import url="Logout.jsp"/>
+
+	<c:if test="${not empty empresa}">
 			Empresa ${ empresa } cadastrada com sucesso!
 		</c:if>
 		

@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:import url="Logout.jsp"/>
 
 	<form action="${linkServl }" method="post">
 	

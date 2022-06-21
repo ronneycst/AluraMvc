@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RemoveEmpresa implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
 		
