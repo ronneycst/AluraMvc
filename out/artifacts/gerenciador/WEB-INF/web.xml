@@ -7,7 +7,7 @@
 <display-name>gerenciador</display-name>
     <filter>
         <filter-name>Aut</filter-name>
-        <filter-class>com.alura.gerenciador.servlet.controller.AutorizacaoFilter</filter-class>
+        <filter-class>com.alura.gerenciador.servlet.controller.monitoramentoFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>Aut</filter-name>
@@ -15,7 +15,7 @@
     </filter-mapping>
     <filter>
         <filter-name>controllerFilter</filter-name>
-        <filter-class>com.alura.gerenciador.servlet.controller.ControllerFilter</filter-class>
+        <filter-class>com.alura.gerenciador.servlet.controller.controllerFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>controllerFilter</filter-name>

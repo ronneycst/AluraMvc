@@ -1,7 +1,5 @@
 package com.alura.gerenciador.servlet.controller;
 
-import com.alura.gerenciador.servlet.model.Usuario;
-import com.alura.gerenciador.servlet.service.*;
 import com.alura.gerenciador.servlet.service.interfaces.Acao;
 
 import javax.servlet.*;
@@ -9,19 +7,12 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "entrada", value = "/entrada")
-public class controllerServlet extends HttpServlet {
+@WebServlet("/entrada")
+public class MonitoramentoFilter extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String param = req.getParameter("acao");
-        boolean autentica = !(param.equals("FormLogin") || param.equals("Login"));
-
-        if(autentica && req.getSession().getAttribute("usuarioLogado") == null){
-            resp.sendRedirect("entrada?acao=FormLogin");
-            return;
-        }
-
         String nomeClasse = "com.alura.gerenciador.servlet.service." + param;
         String nome = null;
 
